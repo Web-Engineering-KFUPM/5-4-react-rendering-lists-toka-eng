@@ -20,11 +20,11 @@ import TaskItem from "./TaskItem";
       <div className="cardHeader">
         <h2>{course.title}</h2>
 
-        {/* TASK 3: All caught up badge ONLY when has tasks AND all done (&& فقط) */}
+        {/* TASK 3: All caught up badge ONLY when has tasks AND all done  */}
         {allDone && <span className="chip good">All caught up</span>}
       </div>
 
-      {/* TASK 3: Empty state ONLY when no tasks (&& فقط) */}
+      {/* TASK 3: Empty state ONLY when no tasks  */}
       {course.tasks.length === 0 && <p className="empty">No tasks yet.</p>}
 
       <ul className="tasks">

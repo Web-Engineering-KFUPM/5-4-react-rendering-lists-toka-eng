@@ -128,24 +128,48 @@ export default function App() {
     );
   }
 
-  return (
-    <main className="wrap">
+ return (
+
+    <div className="wrap">
+
       <header className="appHeader">
+
         <h1>
+
           Study Buddy <span className="blink">▍</span>
+
         </h1>
+
         <p className="subtitle">Lists • Keys • Conditional Rendering</p>
+
       </header>
 
+
+
       <section className="grid">
-        {/* TODO (TASK 1): Render all courses using courses.map(...)
-      For each course render <CourseCard /> and pass:
-        - key={course.id}
-        - course={course}
-        - index={idx}
-        - onMutateCourse={mutateCourseByIndex}
-  */}
+
+        {courses.map((course, idx) => (
+
+          <CourseCard
+
+            key={course.id}
+
+            course={course}
+
+            index={idx}
+
+            onMutateCourse={mutateCourseByIndex}
+
+          />
+
+        ))}
+
       </section>
-    </main>
+
+    </div>
+
   );
+
 }
+
+
